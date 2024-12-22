@@ -2,22 +2,25 @@ package it.cs.unicam.progettomadeinitaly.api.contents.products.productsonsale;
 
 import it.cs.unicam.progettomadeinitaly.api.contents.products.singleproducts.RawProduct;
 
-public class RawProductOnSale extends ProductOnSale {
+/**
+ * @author Alessandro Pascucci
+ */
+public class RawProductOnSale extends ProductOnSale<RawProduct> {
 
-    public RawProductOnSale(RawProduct rawProduct, float price, int quantity, String author) {
-        super(rawProduct, price, quantity, author);
+    public RawProductOnSale(String author, RawProduct rawProduct, float price, int quantity) {
+        super(author, rawProduct, price, quantity);
     }
 
     public String getCertification() {
-        return "";
+        return this.product.getCertification();
     }
 
     public String getVariety() {
-        return "";
+        return this.product.getVariety();
     }
 
     public String getProductionMethod() {
-        return "";
+        return this.product.getProductionMethod();
     }
 
 }

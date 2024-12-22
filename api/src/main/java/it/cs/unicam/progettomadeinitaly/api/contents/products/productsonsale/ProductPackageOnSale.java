@@ -1,15 +1,24 @@
 package it.cs.unicam.progettomadeinitaly.api.contents.products.productsonsale;
 
+import it.cs.unicam.progettomadeinitaly.api.contents.products.Product;
 import it.cs.unicam.progettomadeinitaly.api.contents.products.productpackage.ProductPackage;
 
-public class ProductPackageOnSale extends ProductOnSale{
+import java.util.List;
 
-    public ProductPackageOnSale(String author, boolean status, ProductPackage productPackage, float price, int quantity) {
-        super(productPackage,price,quantity, author, status);
+// TODO rivedere
+/**
+ * @author Alessandro Pascucci
+ */
+public class ProductPackageOnSale extends ProductOnSale<ProductPackage> {
+
+    public ProductPackageOnSale(String author, ProductPackage productPackage, float price, int quantity) {
+        super(author, productPackage, price, quantity);
     }
 
-    @Override
-    public String getDescription() {
-        return super.getDescription() + ", " + this.getAuthor() + ", " + this.getPrice() + ", " + this.getQuantity();
+    /**
+    public List<Product> getProducts() {
+
     }
+     */
+
 }

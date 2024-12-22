@@ -2,16 +2,23 @@ package it.cs.unicam.progettomadeinitaly.api.contents.products.productsonsale;
 
 import it.cs.unicam.progettomadeinitaly.api.contents.products.Product;
 
-public abstract class ProductOnSale extends Product {
+/**
+ * @author Alessandro Pascucci
+ */
+public abstract class ProductOnSale<T extends Product> extends Product {
 
-    protected Product product;
+    protected T product;
 
     private float price;
 
     private int quantity;
 
-    public ProductOnSale(Product product, float price, int quantity, String author) {
-        super(product.getAuthor());
+    public ProductOnSale(String author, T product, float price, int quantity) {
+        super(author);
+        // Works only at runtime
+        // TODO forse non serve perchè nei decorator concreti passiamo direttamente un prodotto non in vendita, ma possiamo lasciarlo per rendere sicura la estensione
+        if (ProductOnSale.class.isAssignableFrom(product.getClass()))
+            throw new IllegalArgumentException("Product of type ProductOnSale is not allowed.");
         this.product = product;
         this.price = price;
         this.quantity = quantity;
@@ -33,8 +40,8 @@ public abstract class ProductOnSale extends Product {
     }
 
     @Override
-    public boolean getStatus() {
-        return this.product.getStatus();
+    public boolean isPublished() {
+        return super.isPublished();
     }
 
     public float getPrice() {
@@ -43,6 +50,16 @@ public abstract class ProductOnSale extends Product {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    // Inserisco i setter
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setProduct(T product) {
+        this.product = product;
     }
 
 }

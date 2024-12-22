@@ -7,6 +7,7 @@ import java.util.List;
 // TODO possibile aggiunta di una interfaccia ISupplyChainPoint
 /**
  * Represents a supply chain point in the supply chain environment
+ * @author Pietro Villa
  */
 public class SupplyChainPoint {
 

@@ -5,6 +5,9 @@ import it.cs.unicam.progettomadeinitaly.api.contents.products.productsonsale.Pro
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Pietro Villa
+ */
 public class ResaleSpecialization extends BusinessSpecialization {
 
     private final List<ProductOnSale> productsOnSale;

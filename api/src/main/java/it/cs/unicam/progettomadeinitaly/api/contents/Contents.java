@@ -2,6 +2,7 @@ package it.cs.unicam.progettomadeinitaly.api.contents;
 
 /**
  *  This interface represent content
+ *  @author Alessandro Pascucci
  */
 public interface Contents {
 
@@ -11,7 +12,7 @@ public interface Contents {
 
     String getDescription();
 
-    boolean getStatus();
+    boolean isPublished();
 
     String getAuthor();
 

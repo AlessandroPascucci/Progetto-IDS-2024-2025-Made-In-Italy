@@ -1,12 +1,16 @@
 package it.cs.unicam.progettomadeinitaly.api.contents.products.singleproducts;
 
+/**
+ * @author Alessandro Pascucci
+ */
 public class RawProduct extends SingleProduct {
 
     private String productionMethod;
 
-    // TODO productionMethod NullPointerException
-    public RawProduct(String name , String description ,String certification, String variety, String productionMethod, String author) {
-        super(author, name, description , certification , variety);
+    public RawProduct(String author, String name , String description ,String certification, String variety, String productionMethod) {
+        super(author, name, description, certification, variety);
+        if (productionMethod == null)
+            throw new NullPointerException("productionMethod is null");
         this.productionMethod = productionMethod;
     }
 
@@ -22,6 +26,12 @@ public class RawProduct extends SingleProduct {
 
     public String getProductionMethod() {
         return this.productionMethod;
+    }
+
+    // Inserisco setter
+
+    public void setProductionMethod(String productionMethod) {
+        this.productionMethod = productionMethod;
     }
 
 }

@@ -5,6 +5,9 @@ import it.cs.unicam.progettomadeinitaly.api.supplychain.SupplyChainPoint;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Matteo Emidio Bruni
+ */
 public abstract class SupplyChainOperator implements Role {
 
     private final String roleName;

@@ -3,6 +3,7 @@ package it.cs.unicam.progettomadeinitaly.api.supplychain.businessspecializations
 // TODO possibile aggiunta di una interfaccia IBusinessSpecialization
 /**
  * Represents a business specialization for a supply chain point
+ * @author Pietro Villa
  */
 public abstract class BusinessSpecialization {
 

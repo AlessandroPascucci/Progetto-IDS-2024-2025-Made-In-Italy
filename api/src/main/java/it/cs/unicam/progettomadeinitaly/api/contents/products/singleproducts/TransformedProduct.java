@@ -2,11 +2,14 @@ package it.cs.unicam.progettomadeinitaly.api.contents.products.singleproducts;
 
 import it.cs.unicam.progettomadeinitaly.api.contents.processes.TransformationProcess;
 
+/**
+ * @author Alessandro Pascucci
+ */
 public class TransformedProduct extends SingleProduct {
 
     private TransformationProcess transformationProcess;
 
-    public TransformedProduct(String name, String description, String certification, String variety, String author) {
+    public TransformedProduct(String author, String name, String description, String certification, String variety) {
         super(author, name, description, certification, variety);
     }
 

@@ -2,6 +2,7 @@ package it.cs.unicam.progettomadeinitaly.api.supplychain;
 
 /**
  * Represents a coordinate a SupplyChainPoint can occupy in the SupplyChain
+ * @author Pietro Villa
  */
 public final class Coordinate {
 

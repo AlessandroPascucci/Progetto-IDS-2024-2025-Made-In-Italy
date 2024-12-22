@@ -5,6 +5,9 @@ import it.cs.unicam.progettomadeinitaly.api.contents.products.singleproducts.Raw
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Pietro Villa
+ */
 public class ProductionSpecialization extends BusinessSpecialization {
 
     private final List<RawProduct> rawProducts;

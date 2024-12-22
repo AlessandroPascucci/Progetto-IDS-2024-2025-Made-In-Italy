@@ -4,8 +4,9 @@ import it.cs.unicam.progettomadeinitaly.api.contents.products.Product;
 
 /**
  * Represents a unitary product
+ * @author Alessandro Pascucci
  */
-public  abstract class SingleProduct extends Product {
+public abstract class SingleProduct extends Product {
 
     private String name;
 
@@ -45,6 +46,23 @@ public  abstract class SingleProduct extends Product {
 
     public String getVariety() {
         return variety;
+    }
+
+    // Inserisco setter
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public void setCertification(String certification) {
+        this.certification = certification;
+    }
+
+    public void setVariety(String variety) {
+        this.variety = variety;
     }
 
 }

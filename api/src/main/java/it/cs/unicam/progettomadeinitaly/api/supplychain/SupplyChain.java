@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 // TODO review (non è chiara la sua esistenza)
+
+/**
+ * @author Pietro Villa
+ */
 public class SupplyChain {
 
     private String name;

@@ -2,6 +2,9 @@ package it.cs.unicam.progettomadeinitaly.api.users;
 
 import it.cs.unicam.progettomadeinitaly.api.users.roles.Role;
 
+/**
+ * @author Matteo Emidio Bruni
+ */
 public class User {
 
     private String name;

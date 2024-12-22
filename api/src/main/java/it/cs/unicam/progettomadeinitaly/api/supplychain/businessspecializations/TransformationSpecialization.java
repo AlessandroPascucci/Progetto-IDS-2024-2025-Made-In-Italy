@@ -6,6 +6,9 @@ import it.cs.unicam.progettomadeinitaly.api.contents.products.singleproducts.Tra
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Pietro Villa
+ */
 public class TransformationSpecialization extends BusinessSpecialization {
 
     private final List<TransformedProduct> transformedProducts;

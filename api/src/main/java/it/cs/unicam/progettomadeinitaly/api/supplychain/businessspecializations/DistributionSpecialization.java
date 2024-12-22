@@ -6,6 +6,9 @@ import it.cs.unicam.progettomadeinitaly.api.contents.products.productpackage.Pro
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Pietro Villa
+ */
 public class DistributionSpecialization extends BusinessSpecialization {
 
     private final List<Product> products;

@@ -1,15 +1,27 @@
 package it.cs.unicam.progettomadeinitaly.api.contents.products.productsonsale;
 
+import it.cs.unicam.progettomadeinitaly.api.contents.processes.TransformationProcess;
 import it.cs.unicam.progettomadeinitaly.api.contents.products.singleproducts.TransformedProduct;
 
-public class TransformedProductOnSale extends ProductOnSale {
+/**
+ * @author Alessandro Pascucci
+ */
+public class TransformedProductOnSale extends ProductOnSale<TransformedProduct> {
 
-    public TransformedProductOnSale(TransformedProduct transformedProduct, float price, int quantity, String author, boolean status) {
-        super(transformedProduct, price, quantity, author, status);
+    public TransformedProductOnSale(String author, TransformedProduct transformedProduct, float price, int quantity) {
+        super(author, transformedProduct, price, quantity);
     }
 
-    @Override
-    public String getDescription() {
-        return super.getDescription() + ", " + this.getAuthor() + ", " + this.getPrice() + ", " + this.getQuantity();
+    public String getCertification() {
+        return this.product.getCertification();
     }
+
+    public String getVariety() {
+        return this.product.getVariety();
+    }
+
+    public TransformationProcess getTransformationProcess() {
+        return this.product.getTransformationProcess();
+    }
+
 }

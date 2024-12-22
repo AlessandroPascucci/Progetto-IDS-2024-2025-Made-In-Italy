@@ -6,10 +6,11 @@ import it.cs.unicam.progettomadeinitaly.api.contents.Contents;
 
 /**
  * Represents a product in the supply chain
+ * @author Alessandro Pascucci
  */
 public abstract class Product implements Contents {
 
-    private boolean status;
+    private boolean published;
     // TODO review autore final???
     private final String author;
 
@@ -17,7 +18,7 @@ public abstract class Product implements Contents {
         if(author == null)
             throw new NullPointerException("author can not be null");
         this.author = author;
-        this.status = false;
+        this.published = false;
     }
 
     public String getAuthor() {
@@ -26,11 +27,11 @@ public abstract class Product implements Contents {
 
     // TODO review
     public void setStatus(boolean status) {
-        this.status = status;
+        this.published = status;
     }
 
-    public boolean getStatus() {
-        return status;
+    public boolean isPublished() {
+        return this.published;
     }
 
 }
